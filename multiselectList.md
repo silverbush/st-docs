@@ -76,3 +76,37 @@ And not forgot to link script file:
 ```
 <script src="~/Scripts/multiselect-list.js"></script>
 ```
+
+In partial page for list we have format like this:
+```
+<table class="table table-striped table-card">
+    <tr>
+        <th>
+            <label class="checkbox checkbox-inline">
+                <input type="checkbox" class="ml-select-page" />
+                <i class="input-helper"></i>
+            </label>
+        </th>
+        <th>other columns</th>
+        ...
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <label class="checkbox checkbox-inline">
+                    <input type="checkbox" class="ml-select" data-id="@item.UserID" />
+                    <i class="input-helper"></i>
+                </label>
+            </td>
+            <td>other columns</td>
+            ...
+        </tr>
+    }
+</table>
+```
+
+On footer paging part we have ```this``` as parameter for ```PagedOnComplete``` function:
+```
+OnComplete = "PagedOnComplete(this)"
+```
