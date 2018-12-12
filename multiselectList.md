@@ -1,5 +1,7 @@
 
-# Basic page layout
+# Multiselect List
+
+### Use selection in filters
 
 If we have filters form for list and we need to use selections when applying filters, we have to add this hidden elements inside form:
 ```
@@ -50,6 +52,8 @@ public async Task<ActionResult> AddInvitation(string searchInvitedUser, string c
   ...
 }
 ```
+
+### Use selection in filters
 
 We change list placement to this format:
 
