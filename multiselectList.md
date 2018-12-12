@@ -53,7 +53,7 @@ public async Task<ActionResult> AddInvitation(string searchInvitedUser, string c
 }
 ```
 
-### Use selection in filters
+### Placeing List 
 
 We change list placement to this format:
 
@@ -69,6 +69,8 @@ We change list placement to this format:
     </div>
 </div>
 ```
+
+We can remove ```ml-selection-results``` div if we do not see number of selections, and ```Select all entries```, ```Clear Selection``` buttons
 
 And not forgot to link script file:
 ```
