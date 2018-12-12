@@ -70,7 +70,7 @@ We change list placement to this format:
 </div>
 ```
 
-We can remove ```ml-selection-results``` div if we do not see number of selections, and ```Select all entries```, ```Clear Selection``` buttons
+We can remove ```ml-selection-results``` div if we do not want to see number of selections, and ```Select all entries```, ```Clear Selection``` buttons
 
 And not forgot to link script file:
 ```
