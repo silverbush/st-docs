@@ -110,3 +110,48 @@ On footer paging part we have ```this``` as parameter for ```PagedOnComplete``` 
 ```
 OnComplete = "PagedOnComplete(this)"
 ```
+
+### Calling js functions
+
+```initMultiselectList()``` function called on document.ready, but if any case needed, you have to call again.
+
+On ```PagedOnCompleteCustom``` you have call ```mlInitSelection``` Like this:
+
+```
+function PagedOnCompleteCustom(obj) {
+    var listId = $(obj).attr('data-ajax-update').replace("#", "");
+    mlInitSelection(listId);
+}
+```
+
+For saveing or doing any action with ajax post use ```mlSelection``` parameter like this:
+
+```
+$.ajax({
+    url: addinvitationVars.saveinvitation,
+    type: 'POST',
+    data: {
+        EventID: parseInt($("#EventID").val()),
+        isRequired: $("#isRequired")[0].checked,
+        IsSendEmail: false,
+        mlSelection: multiLists['divList']
+    },
+    success: function (data) {
+        if (data.success)
+            location.reload();
+        else {
+            $('#dialogContent').html(data.message);
+            location.reload();
+        }
+    }
+});
+```
+
+On action we have parameter like this:
+```
+public async Task<ActionResult> SaveInvitation(int EventID, bool isRequired, bool IsSendEmail, MultiselectListModel mlSelection)
+{
+    ...
+}
+```
+
