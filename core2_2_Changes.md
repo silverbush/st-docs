@@ -3,7 +3,6 @@
 
 * ```@Html.Partial()```
   ```@Html.PartialAsync()```  
-  
   ```@Html.RenderPartial()``` 
   ```@Html.RenderPartialAsync()```  
   
