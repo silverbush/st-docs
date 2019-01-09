@@ -1,4 +1,4 @@
 
 # Core 2.2 Changes
 
-* ```djfhdjhfd``` change to ```dfdfdf```
+* ```@await Html.PartialAsync```, ```@await Html.RenderPartialAsync```, ```@Html.Partial```, ```@Html.RenderPartial``` change to ```<partial name="" for="" />```
